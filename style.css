@@ -1,0 +1,33 @@
+/* Establece márgenes y rellenos predeterminados a 0 y define la caja del modelo de caja como borde-box para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centra el texto en el cuerpo del documento HTML */
+body {
+    text-align: center;
+}
+
+/* Aplica una animación llamada 'wheel' al elemento con id 'frond-wheel' */
+#frond-wheel {
+    /* La animación 'wheel' durará 1 segundo, se repetirá infinitamente, y tendrá una interpolación lineal */
+    animation: wheel 1s infinite linear;
+    /* Establece el origen de la transformación en el centro del elemento */
+    transform-origin: center;
+    /* Establece el tipo de caja a utilizar para las transformaciones */
+    transform-box: fill-box;
+}
+
+/* Define la animación 'wheel' */
+@keyframes wheel {
+    /* El estado inicial de la animación: sin rotación (0 grados) */
+    from {
+        transform: rotateZ(0deg);
+    }
+    /* El estado final de la animación: rotación completa (360 grados) */
+    to {
+        transform: rotateZ(360deg);
+    }
+}
